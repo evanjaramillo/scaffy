@@ -118,23 +118,24 @@
                             <version>8.36</version>
                         </dependency>
                     </dependencies>
+                    <configuration>
+                        <configLocation>scaffy-checkstyle/src/main/resources/scaffy/checkstyle.xml</configLocation>
+                        <encoding>UTF-8</encoding>
+                        <failsOnError>true</failsOnError>
+                        <failOnViolation>true</failOnViolation>
+                        <consoleOutput>true</consoleOutput>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>checkstyle</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
     </build>
-
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${maven-checkstyle-plugin.version}</version>
-                <configuration>
-                    <configLocation>scaffy/checkstyle.xml</configLocation>
-                    <headerLocation>scaffy/CODE-HEADER.txt</headerLocation>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
-
 </project>

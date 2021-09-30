@@ -43,7 +43,6 @@
         <module>scaffy-core</module>
         <module>scaffy-discovery</module>
         <module>scaffy-gateway</module>
-        <module>scaffy-checkstyle</module>
     </modules>
 
     <dependencyManagement>
@@ -119,11 +118,12 @@
                         </dependency>
                     </dependencies>
                     <configuration>
-                        <configLocation>scaffy-checkstyle/src/main/resources/scaffy/checkstyle.xml</configLocation>
+                        <configLocation>checkstyle.xml</configLocation>
                         <encoding>UTF-8</encoding>
                         <failsOnError>true</failsOnError>
                         <failOnViolation>true</failOnViolation>
                         <consoleOutput>true</consoleOutput>
+                        <linkXRef>true</linkXRef>
                     </configuration>
                     <executions>
                         <execution>
